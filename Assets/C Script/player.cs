@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CScript : MonoBehaviour
+public class player : MonoBehaviour
 {
     SpriteRenderer sr;
     Animator anim;
@@ -35,7 +35,7 @@ public class CScript : MonoBehaviour
         anim.SetBool("Run", false);
         anim.SetBool("Jump", false);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)) 
         {
             rb.AddForce(Vector2.up * jumpAmount, ForceMode2D.Impulse);
             anim.SetBool("Jump", true);
@@ -63,7 +63,7 @@ public class CScript : MonoBehaviour
 
         void DoRun()
         {
-            if (Input.GetKey(KeyCode.LeftArrow) == true)
+            if (Input.GetKey(KeyCode.A) == true)
             {
                 print("player pressed left");
                 transform.position = new Vector2(transform.position.x - (speed * Time.deltaTime), transform.position.y);
@@ -73,7 +73,7 @@ public class CScript : MonoBehaviour
 
 
 
-            if (Input.GetKey(KeyCode.RightArrow) == true)
+            if (Input.GetKey(KeyCode.D) == true)
             {
                 print("player pressed right");
                 transform.position = new Vector2(transform.position.x + (speed * Time.deltaTime), transform.position.y);

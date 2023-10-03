@@ -188,7 +188,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      majima 1_0: 1695428761363968101
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
