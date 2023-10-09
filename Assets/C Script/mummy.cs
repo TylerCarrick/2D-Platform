@@ -9,7 +9,7 @@ public class mummy : MonoBehaviour
     public GameObject player;
     SpriteRenderer sr;
 
-   
+    public Transform respawnPoint;
 
 
     void Start()
@@ -49,26 +49,29 @@ public class mummy : MonoBehaviour
     {
         if (other.gameObject.name == "Player")
         {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
 
+            other.gameObject.GetComponent<Transform>().position = respawnPoint.transform.position;
 
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
